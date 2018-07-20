@@ -17,7 +17,7 @@ import java.util.Random;
 
 @RestController //аннотация bin, rest
 @RequestMapping(path="/rest",produces="application/json") //produces - методы будут отдавать json
-public class UiController {
+public class UiController implements HasLogger{
 
     @Autowired
     RestTemplate restTemplate;
@@ -27,6 +27,7 @@ public class UiController {
 
     @Autowired
     JokeDao jokeDao;
+
 
     @GetMapping(path="/text")
     public String text1() {
@@ -49,7 +50,7 @@ public class UiController {
             joke.setSite(result.get(index).get("site"));
             joke.setText(result.get(index).get("elementPureHtml"));
 
-            System.out.println(joke.getText());
+
             ObjectId id = new ObjectId();
             joke.setId(id);
 
@@ -64,6 +65,13 @@ public class UiController {
     @PostMapping(path = "add")
     public void add(@RequestBody String id) {
         jokeDao.addJoke(cache.getIfPresent(new ObjectId(id)));
+
+    }
+
+    @GetMapping(path="/getAll")
+    public List<Joke> getAllJokes(){
+        getLogger().info("Start getting all jokes.");
+        return jokeDao.getAllJokes();
 
     }
 }
