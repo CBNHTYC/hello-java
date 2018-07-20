@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700');
+
+*{
+    box-sizing: border-box;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+p{
+    font-family: 'Amatic SC', cursive;
+
+    padding: 30px;
+    font-size: 35px;
+    text-align: center;
+}
+
+body{
+    background-image: url("../img/backgroung.jpg");
+}
+
+main{
+    background: #ffff;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid #ffff;
+    border-right-color: #5f9ea0;
+    border-left-color: #5f9ea0;
+
+}
+
+.form{
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 800px;
+    min-width: 800px;
+    background-color: #f8f8f8;
+    justify-content: center;
+    position: relative;
+    border-color: #5f9ea0;
+    border-style: solid;
+}
+
+.buttons{
+    margin: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.add{
+    margin: 0 50px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    border-style: none;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+
+}
+
+.next{
+    margin: 0 50px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    border-style: none;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+
+}
+
+
+.footer{
+    alignment: bottom;
+}
+
+.linkToAll{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.joke{
+    margin: 15px auto;
+    padding: 30px;
+    max-width: 800px;
+    min-width: 800px;
+    background-color: #f8f8f8;
+    justify-content: center;
+    border-color: #5f9ea0;
+    border-style: solid;
+}
+
+h1{
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    font-weight: bold;
+}
